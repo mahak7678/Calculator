@@ -1,0 +1,24 @@
+h1{
+	margin: 23px;
+}
+input{
+	display: inline-block;
+	font-size: 20px;
+	margin-top: 12px;
+	margin: 12px;
+	padding: 15px;
+	background-color: #44e369;
+}
+div{
+	margin: 23px;
+   
+}
+#result{
+        font-size: 20px;
+        display: flex;
+}
+input:hover{
+	background-color: black;
+	color: white;
+}
+

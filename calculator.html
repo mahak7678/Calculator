@@ -1,0 +1,65 @@
+<!DOCTYPE>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+<title>calculator</title>
+<script type="text/javascript">
+	{
+		function solve(val) {
+			// body...
+			var v=document.getElementById('result');
+			v.value += val;
+		}
+		function result() {
+			// body...
+			var num1=document.getElementById('result').value;
+			var num2=eval(num1);
+			document.getElementById('result').value=num2;
+		}
+		function clear() {
+			// body...
+			var inp = document.getElementById('result');
+			inp.value ='';
+		}
+		function Back() {
+			// body...
+			var ev= document.getElementById('result');
+			ev.value = ev.value.slice(0,-1);
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="calcu">
+		<h1><b>Calculator</b></h1>
+		<input type="text" name="result" id="result">
+		<section>
+		<input type="button"value="←"onclick="Back('←')">
+		<input type="button" value="1" onclick= "solve('1')" >
+		<input type="button" value="2" onclick="solve('2')">
+		<input type="button" value="/" onclick="solve('/')" >
+	    </section>
+	    <section>
+		<input type="button" value="3" onclick="solve('3')" >
+		<input type="button" value="4" onclick="solve('4')" >
+		<input type="button" value="5" onclick="solve('5')">
+		<input type="button" value="*" onclick="solve('*')" >
+	    </section>
+	    <section>
+		<input type="button" value="6" onclick="solve('6')"  >
+		<input type="button" value="7" onclick="solve('7')" >
+		<input type="button" value="8" onclick="solve('8')" >
+		<input type="button" value="+" onclick="solve('+')" >
+	    </section>
+	    <section>
+		<input type="button" value="9" onclick="solve('8')" >
+		<input type="button" value="0" onclick="solve('0')" >
+		<input type="button" value="-" onclick="solve('-')" >
+		<input type="button" value="=" onclick="result('=')" >
+        </section>
+	</div>
+</body>
+</html>
